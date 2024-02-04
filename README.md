@@ -29,10 +29,10 @@ torch-transformer-hinglish2hindi-translator is a character-level translater impl
    - Example:
      ```python
      from translator import Hinglish2HindiTranslator
-
-     translator = Hinglish2HindiTranslator(model_path='models/your_pretrained_model.pth')
-     translation = translator.translate("Your Hinglish text goes here.")
-     print(f"Translation: {translation}")
+     # translator = Hinglish2HindiTranslator(model_path='model/hinglish2hindi_oneHot_epoch-50.pth.tar', model_type_oneHot=True)
+     translator = Hinglish2HindiTranslator(model_path='model/hinglish2hindi_epoch-50.pth.tar', model_type_oneHot=False)
+     translation = translator.translate("mera naam laksh kumar sisodiya hai")
+     print(f"Translation: {translation}") # ->  मेरा नाम लक्ष कुमर सिसोदिया है
      ```
 
 5. **Fine-tuning (Optional):**
